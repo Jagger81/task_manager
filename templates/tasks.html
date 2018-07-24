@@ -6,7 +6,7 @@
             <div class="collapsible-header">
                 <div class="col s3">
                     <i class="material-icons">expand_more</i>
-                    <a class="waves-effect waves-light btn btn_small">Done</a>
+                    <a href="{{url_for('delete_task', task_id=task._id)}}" class="waves-effect waves-light btn btn_small">Done</a>
                     <a href="{{url_for('edit_task', task_id=task._id)}}" class="waves-effect waves-light btn btn_small blue">Edit</a>
                     
                 </div>
@@ -23,5 +23,10 @@
         {% endfor %}
 
     </ul>
+</div>
+<div class="row">
+    <a href="{{ url_for('new_category') }}" class="waves-effect waves-light btn">
+        <i class="material-icons right">playlist_add</i>Add Category
+    </a>
 </div>
 {% endblock %}
